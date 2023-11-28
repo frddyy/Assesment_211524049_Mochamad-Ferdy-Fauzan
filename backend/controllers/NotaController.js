@@ -28,7 +28,7 @@ export const createNota = async (req, res) => {
 export const getAllNota = async (req, res) => {
     try {
       const nota = await prisma.nota.findMany(); // Mengambil semua tenan
-      res.status(200).json(tenan); // Mengirim semua tenan sebagai respons
+      res.status(200).json(nota); // Mengirim semua tenan sebagai respons
     } catch (error) {
       res.status(500).json({ msg: error.message });
     }

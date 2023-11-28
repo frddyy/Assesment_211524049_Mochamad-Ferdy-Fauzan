@@ -34,7 +34,7 @@ DELETE http://localhost:5000/barang/BRG21152404902
 GET http://localhost:5000/kasir
 
 ###
-GET http://localhost:5000/kasir/KS2115240490
+GET http://localhost:5000/kasir/KS21152404901
 
 ###
 POST http://localhost:5000/kasir
@@ -97,14 +97,14 @@ POST http://localhost:5000/nota
 Content-Type: application/json
 
 {   
-    "KodeNota": "NO21152404901",
-    "KodeTenan": "TK21152404901",
-    "KodeKasir": "KS21152404901",
+    "KodeNota": "NO21152404902",
+    "KodeTenan": "TK21152404902",
+    "KodeKasir": "KS21152404902",
     "TglNota": "2023-11-27T10:23:00Z",
     "JamNota": "2023-11-27T10:30:18Z",
-    "JumlahBelanja" : 100000,
-    "Diskon": 2,
-    "Total": 98000
+    "JumlahBelanja" : 50000,
+    "Diskon": 1,
+    "Total": 49500
 }
 
 ###
@@ -117,3 +117,22 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:5000/tenan/TK21152404903
+
+//////////////////////// CRUD BARANG NOTA ////////////////////////////
+###
+GET http://localhost:5000/barangNota
+
+###
+GET http://localhost:5000/NO21152404901/BRG21152404901
+
+###
+POST http://localhost:5000/barangNota
+Content-Type: application/json
+
+{   
+    "KodeNota": "NO21152404901",
+    "KodeBarang": "BRG21152404902",
+    "JumlahBarang": 14,
+    "HargaSatuan": 5000,
+    "Jumlah": 70000
+}
