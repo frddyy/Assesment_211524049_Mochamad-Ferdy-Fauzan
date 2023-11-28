@@ -1,0 +1,119 @@
+//////////////////////// CRUD BARANG ////////////////////////////
+###
+GET http://localhost:5000/barang
+
+###
+GET http://localhost:5000/barang/BRG21152404901
+
+###
+POST http://localhost:5000/barang
+Content-Type: application/json
+
+{   
+    "KodeBarang": "BRG21152404902",
+    "NamaBarang": "Susu Ultra Ferdy",
+    "Satuan": "Pcs",
+    "HargaSatuan": 5000,
+    "Stok": 100
+}
+
+###
+PATCH http://localhost:5000/barang/BRG21152404901
+Content-Type: application/json
+
+{   
+    "Stok": 9
+}
+
+###
+DELETE http://localhost:5000/barang/BRG21152404902
+
+
+//////////////////////// CRUD KASIR ////////////////////////////
+###
+GET http://localhost:5000/kasir
+
+###
+GET http://localhost:5000/kasir/KS2115240490
+
+###
+POST http://localhost:5000/kasir
+Content-Type: application/json
+
+{   
+    "KodeKasir": "KS21152404902",
+    "Nama": "Budi Ferdy",
+    "HP":"08211524049735"
+}
+
+###
+PATCH http://localhost:5000/kasir/KS21152404902
+Content-Type: application/json
+
+{   
+    "Nama": "Budi Mochamad Fauzan"
+}
+
+###
+DELETE http://localhost:5000/kasir/KS21152404903
+
+//////////////////////// CRUD TENAN ////////////////////////////
+###
+GET http://localhost:5000/tenan
+
+###
+GET http://localhost:5000/tenan/TK21152404901
+
+###
+POST http://localhost:5000/tenan
+Content-Type: application/json
+
+{   
+    "KodeTenan": "TK21152404902",
+    "NamaTenan": "Ferdymart",
+    "HP":"08211524049735"
+}
+
+###
+PATCH http://localhost:5000/tenan/TK21152404902
+Content-Type: application/json
+
+{   
+    "NamaTenan": "Ferdymart Express"
+}
+
+###
+DELETE http://localhost:5000/tenan/TK21152404903
+
+//////////////////////// CRUD NOTA ////////////////////////////
+###
+GET http://localhost:5000/nota
+
+###
+GET http://localhost:5000/nota/NO21152404901
+
+###
+POST http://localhost:5000/nota
+Content-Type: application/json
+
+{   
+    "KodeNota": "NO21152404901",
+    "KodeTenan": "TK21152404901",
+    "KodeKasir": "KS21152404901",
+    "TglNota": "2023-11-27T10:23:00Z",
+    "JamNota": "2023-11-27T10:30:18Z",
+    "JumlahBelanja" : 100000,
+    "Diskon": 2,
+    "Total": 98000
+}
+
+###
+PATCH http://localhost:5000/nota/NO21152404901
+Content-Type: application/json
+
+{   
+    "JamNota": "2023-11-27T10:30:18Z"
+}
+
+###
+DELETE http://localhost:5000/tenan/TK21152404903
